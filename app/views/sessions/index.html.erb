@@ -1,0 +1,13 @@
+<div class='ui six wide column'>
+	<h1>All</h1>
+	<% if logged_in? %>
+		<h1>Welcome, <%= @user.username %></h1>
+	<% end %>
+	<div class= 'ui huge middle aligned selection divided list'>
+	<% @secrets.each do |secret| %>
+	<div class="item">
+		<%= link_to secret, secret_path(@secret) %>
+	</div>
+	<% end %>
+</div>
+</div>
